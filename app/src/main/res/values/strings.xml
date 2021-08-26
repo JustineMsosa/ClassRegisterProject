@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">FINALI PROJECT</string>
+    <string name="pirates" />
+    <string name="ninjas" />
+    <string name="keyword">Keyword</string>
+    <string-array name="present_absent">
+        <item>Present</item>
+        <item>Absent</item>
+        <item>Ab with Reason</item>
+        <item>Sick</item>
+    </string-array>
+</resources>
