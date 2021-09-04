@@ -4,6 +4,130 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StudentDetails">
+    android:background="@drawable/action_bar4"
+    tools:context=".Login">
+
+    <TextView
+        android:id="@+id/TextViewName"
+        android:layout_width="0dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:text="Name"
+        android:textColor="#4D9CAE"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="#dee3e6"
+        app:iconTint="#F5F6F6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.562"
+        app:layout_constraintWidth_percent=".8"
+        app:rippleColor="#F5F6F6" />
+
+    <TextView
+        android:id="@+id/TextViewAge"
+        android:layout_width="0dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:text="Age"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/purple_500"
+        app:iconTint="#27496D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewName"
+        app:layout_constraintVertical_bias="0.107"
+        app:layout_constraintWidth_percent=".8" />
+
+    <TextView
+        android:id="@+id/TextViewVillage"
+        android:layout_width="0dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:text="Villge"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewAge"
+        app:layout_constraintVertical_bias="0.124"
+        app:layout_constraintWidth_percent=".8" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:text="CLASS REGISTER"
+        android:textColor="#FAF3F3"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.104"
+        app:layout_constraintWidth_percent=".8" />
+
+    <ImageView
+        android:id="@+id/imageViewStu"
+        android:layout_width="328dp"
+        android:layout_height="210dp"
+        android:alpha="0.9"
+        android:background="@drawable/image_helper"
+        android:src="@drawable/student"
+        app:layout_constraintBottom_toTopOf="@+id/TextViewName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.612"
+        app:layout_constraintWidth_percent=".8" />
+
+    <TextView
+        android:id="@+id/TextViewSex"
+        android:layout_width="0dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:text="Sex"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/purple_500"
+        app:iconTint="#27496D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewVillage"
+        app:layout_constraintVertical_bias="0.163"
+        app:layout_constraintWidth_percent=".8" />
+
+    <TextView
+        android:id="@+id/TextViewCode"
+        android:layout_width="0dp"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_bg"
+        android:text="Student Code"
+        android:textSize="16sp"
+        android:textStyle="bold"
+
+        app:iconTint="#27496D"
+        app:backgroundTint="#dee3e6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TextViewSex"
+        app:layout_constraintVertical_bias="0.236"
+        app:layout_constraintWidth_percent=".8" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

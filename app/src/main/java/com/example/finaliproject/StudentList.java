@@ -206,12 +206,22 @@ public class  StudentList extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
+                Cursor c = MainActivity2.sqLiteHelper.getData("SELECT id FROM STUDENT");
+                ArrayList<Integer> arrID = new ArrayList<Integer>();
+                while (c.moveToNext()){
+                    arrID.add(c.getInt(0));
+                }
+
+                int j = arrID.get(position);
+
+
 
                 Student newStudent = new Student(list.get(position).getId(),
                         list.get(position).getName().toString(),
                         list.get(position).getAge(), list.get(position).getPresent(), list.get(position).getImage(), list.get(position).getSex());
                 Intent intent = new Intent(StudentList.this, StudentDetails.class);
-               intent.putExtra("student", newStudent);
+//               intent.putExtra("student", j);
+                intent.putExtra(Intent.EXTRA_TEXT, ""+j);
                 startActivity(intent);
 
             }
