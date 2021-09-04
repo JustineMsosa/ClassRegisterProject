@@ -443,6 +443,14 @@ public class  StudentList extends AppCompatActivity {
                     int presentUpdate = 1 + Integer.parseInt(present);
                     String p = String.format("%s", presentUpdate);
 
+                    MainActivity2.sqLiteHelper.updateData(
+                            name,
+                            age,
+                            p,
+                            image, sex, village, studentCode,
+                            id
+                    );
+
 
                     list.add(new Student(id, name, "Age : "+age, p, image, sex, village, studentCode));
                      }

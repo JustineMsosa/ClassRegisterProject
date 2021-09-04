@@ -46,7 +46,7 @@ public class StudentDetails extends AppCompatActivity {
             if (id1 == id){
                 name.setText("  Name: "+name1);
                 age.setText("   Age: "+age1+"  | Sex: "+sex1);
-                attendance.setText("Attendance: "+present1);
+                attendance.setText("  Attendance: "+present1);
                 village.setText("  Village: "+village1);
                 code.setText("  Student Code: 0"+id1+""+studentCode1);
                 imageView.setImageBitmap( BitmapFactory.decodeByteArray(image1, 0 , image1.length));
