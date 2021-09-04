@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/action_bar4"
+    android:background="@drawable/action_bar2"
     tools:context=".Login">
 
     <TextView
@@ -51,6 +51,9 @@
         android:padding="5dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button_bg"
+        android:textColor="#4D9CAE"
+        app:backgroundTint="#dee3e6"
+        app:iconTint="#F5F6F6"
         android:text="Villge"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -67,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/aclonica"
-        android:text="CLASS REGISTER"
+        android:text="Student Details"
         android:textColor="#FAF3F3"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -98,7 +101,7 @@
         android:padding="5dp"
         android:layout_height="wrap_content"
         android:background="@drawable/button_bg"
-        android:text="Sex"
+        android:text="Attendance"
         android:textSize="16sp"
         android:textStyle="bold"
         app:backgroundTint="@color/purple_500"
