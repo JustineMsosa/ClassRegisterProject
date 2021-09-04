@@ -20,7 +20,7 @@ public class Welcome extends AppCompatActivity {
         RegisterStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent aboutIntent =  new Intent(Welcome.this, MainActivity2.class);
+                Intent aboutIntent =  new Intent(Welcome.this, AddStudent.class);
                 startActivity(aboutIntent);
 
             }

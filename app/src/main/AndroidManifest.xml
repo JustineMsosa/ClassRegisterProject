@@ -14,11 +14,9 @@
         <activity android:name=".ClassList" android:parentActivityName=".StudentList"></activity>
         <activity android:name=".ClassRegister" android:parentActivityName=".StudentList" />
         <activity android:name=".Welcome" />
-        <activity android:name=".Trial" />
-        <activity android:name=".MainActivity2" android:parentActivityName="" />
+        <activity android:name=".AddStudent" android:parentActivityName="" />
 
         <activity android:name=".Login2" />
-        <activity android:name=".Login" />
         <activity android:name=".Register" />
         <activity
             android:name=".AboutApp"

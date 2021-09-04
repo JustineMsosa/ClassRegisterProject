@@ -24,7 +24,7 @@ import com.example.finaliproject.Database.SQLiteHelper;
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-public class MainActivity2 extends AppCompatActivity {
+public class AddStudent extends AppCompatActivity {
 
     EditText edtName, edtAge, edtVillage, studentCode;
     Button btnChoose, btnAdd, btnList;
@@ -58,7 +58,7 @@ public class MainActivity2 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 ActivityCompat.requestPermissions(
-                        MainActivity2.this,
+                        AddStudent.this,
                         new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
                         REQUEST_CODE_GALLERY
 
@@ -95,7 +95,7 @@ public class MainActivity2 extends AppCompatActivity {
                             imageView.setImageResource(R.drawable.username);
                             studentCode.setText("");
 
-                            Intent intent = new Intent(MainActivity2.this, StudentList.class);
+                            Intent intent = new Intent(AddStudent.this, StudentList.class);
                             startActivity(intent);
                         } catch (Exception e) {
                             e.printStackTrace();
@@ -109,7 +109,7 @@ public class MainActivity2 extends AppCompatActivity {
         btnList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity2.this, StudentList.class);
+                Intent intent = new Intent(AddStudent.this, StudentList.class);
                 startActivity(intent);
             }
         });
