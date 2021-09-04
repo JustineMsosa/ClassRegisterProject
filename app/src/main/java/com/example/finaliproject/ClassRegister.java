@@ -22,7 +22,7 @@ public class ClassRegister extends AppCompatActivity {
         students = new ArrayList<>();
         students_register_rcv = (RecyclerView) findViewById(R.id.students_register_rcv);
 
-        Cursor cursor = AddStudent.sqLiteHelper.getData("SELECT * FROM STUDENT");
+        Cursor cursor = MainActivity2.sqLiteHelper.getData("SELECT * FROM STUDENT");
 
         if (cursor.getCount() == 0){
 

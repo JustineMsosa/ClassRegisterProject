@@ -11,11 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FINALIPROJECT">
-        <activity android:name=".ClassList" android:parentActivityName=".StudentList"></activity>
-        <activity android:name=".ClassRegister" android:parentActivityName=".StudentList" />
+        <activity android:name=".StudentDetails"></activity>
+        <activity
+            android:name=".ClassList"
+            android:parentActivityName=".StudentList" />
+        <activity
+            android:name=".ClassRegister"
+            android:parentActivityName=".StudentList" />
         <activity android:name=".Welcome" />
-        <activity android:name=".AddStudent" android:parentActivityName="" />
-
+        <activity
+            android:name=".MainActivity2"
+            android:parentActivityName="" />
         <activity android:name=".Login2" />
         <activity android:name=".Register" />
         <activity

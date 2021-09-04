@@ -105,7 +105,7 @@ public class  StudentList extends AppCompatActivity {
         fab1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(StudentList.this, AddStudent.class));
+                startActivity(new Intent(StudentList.this, MainActivity2.class));
 
             }
         });
@@ -135,7 +135,7 @@ public class  StudentList extends AppCompatActivity {
         gridView.setAdapter(adapter);
 
         // get all data from sqlite
-        Cursor cursor = AddStudent.sqLiteHelper.getData("SELECT * FROM STUDENT");
+        Cursor cursor = MainActivity2.sqLiteHelper.getData("SELECT * FROM STUDENT");
         list.clear();
         while (cursor.moveToNext()) {
             int id = cursor.getInt(0);
@@ -166,7 +166,7 @@ public class  StudentList extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int item) {
                         if (item == 0) {
                             // updating student
-                            Cursor c = AddStudent.sqLiteHelper.getData("SELECT id FROM STUDENT");
+                            Cursor c = MainActivity2.sqLiteHelper.getData("SELECT id FROM STUDENT");
                              ArrayList<Integer> arrID = new ArrayList<Integer>();
                             while (c.moveToNext()){
                                 arrID.add(c.getInt(0));
@@ -178,7 +178,7 @@ public class  StudentList extends AppCompatActivity {
                         }
                         else if (item == 1){
                             // deleting student
-                            Cursor c = AddStudent.sqLiteHelper.getData("SELECT id FROM STUDENT");
+                            Cursor c = MainActivity2.sqLiteHelper.getData("SELECT id FROM STUDENT");
                             ArrayList<Integer> arrID = new ArrayList<Integer>();
                             while (c.moveToNext()){
                                 arrID.add(c.getInt(0));
@@ -188,7 +188,7 @@ public class  StudentList extends AppCompatActivity {
 
                         else {
 
-                            Cursor c = AddStudent.sqLiteHelper.getData("SELECT id FROM STUDENT");
+                            Cursor c = MainActivity2.sqLiteHelper.getData("SELECT id FROM STUDENT");
                             ArrayList<Integer> arrID = new ArrayList<Integer>();
                             while (c.moveToNext()){
                                 arrID.add(c.getInt(0));
@@ -202,8 +202,23 @@ public class  StudentList extends AppCompatActivity {
             }
         });
 
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View v,
+                                    int position, long id) {
+
+                Student newStudent = new Student(list.get(position).getId(),
+                        list.get(position).getName().toString(),
+                        list.get(position).getAge(), list.get(position).getPresent(), list.get(position).getImage(), list.get(position).getSex());
+                Intent intent = new Intent(StudentList.this, StudentDetails.class);
+               intent.putExtra("student", newStudent);
+                startActivity(intent);
+
+            }
+        });
 
         }
+
 
     private void ShowDialogPresent(Activity activity,final int position){
         final Dialog dialog = new Dialog(activity);
@@ -239,7 +254,7 @@ public class  StudentList extends AppCompatActivity {
             final TextView edtAge = (TextView) dialog.findViewById(R.id.edtAge);
             Button btnUpdate = (Button) dialog.findViewById(R.id.btnUpdate);
 
-        Cursor cursor = AddStudent.sqLiteHelper.getData("SELECT * FROM STUDENT");
+        Cursor cursor = MainActivity2.sqLiteHelper.getData("SELECT * FROM STUDENT");
         while (cursor.moveToNext()) {
             int id = cursor.getInt(0);
             if (id == position){
@@ -280,7 +295,7 @@ public class  StudentList extends AppCompatActivity {
             btnUpdate.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Cursor cursor = AddStudent.sqLiteHelper.getData("SELECT * FROM STUDENT");
+                    Cursor cursor = MainActivity2.sqLiteHelper.getData("SELECT * FROM STUDENT");
                     while (cursor.moveToNext()) {
                         int id = cursor.getInt(0);
                         String sex = cursor.getString(5);
@@ -289,11 +304,11 @@ public class  StudentList extends AppCompatActivity {
                         if (id == position){
                             String present = cursor.getString(3);
                             try {
-                                AddStudent.sqLiteHelper.updateData(
+                                MainActivity2.sqLiteHelper.updateData(
                                         edtName.getText().toString().trim(),
                                         edtAge.getText().toString().trim(),
                                         present,
-                                        AddStudent.imageViewToByte(imageViewStudent), sex, village, studentCode,
+                                        MainActivity2.imageViewToByte(imageViewStudent), sex, village, studentCode,
                                         position
                                 );
                                 dialog.dismiss();
@@ -364,7 +379,7 @@ public class  StudentList extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 try {
-                    AddStudent.sqLiteHelper.deleteData(idStudent);
+                    MainActivity2.sqLiteHelper.deleteData(idStudent);
                     Toast.makeText(getApplicationContext(), "Delete successfully!!!",Toast.LENGTH_SHORT).show();
                 } catch (Exception e){
                     Log.e("error", e.getMessage());
@@ -384,7 +399,7 @@ public class  StudentList extends AppCompatActivity {
 
     private void updateStudentList(){
         // get all data from sqlite
-        Cursor cursor = AddStudent.sqLiteHelper.getData("SELECT * FROM STUDENT");
+        Cursor cursor = MainActivity2.sqLiteHelper.getData("SELECT * FROM STUDENT");
         list.clear();
         while (cursor.moveToNext()) {
             int id = cursor.getInt(0);
@@ -403,7 +418,7 @@ public class  StudentList extends AppCompatActivity {
 
     private void updateStudentPresentList(final int position1){
         // get all data from sqlite
-        Cursor cursor = AddStudent.sqLiteHelper.getData("SELECT * FROM STUDENT");
+        Cursor cursor = MainActivity2.sqLiteHelper.getData("SELECT * FROM STUDENT");
         list.clear();
         while (cursor.moveToNext()) {
             int id = cursor.getInt(0);
@@ -464,5 +479,6 @@ public class  StudentList extends AppCompatActivity {
 
         super.onActivityResult(requestCode, resultCode, data);
     }
+
 
 }
