@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.finaliproject.R;
+
 public class Trial extends AppCompatActivity {
     TextView editText1;
     EditText txt;

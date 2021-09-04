@@ -3,7 +3,6 @@ package com.example.finaliproject;
 import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
-import android.app.SearchManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -14,20 +13,13 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,18 +29,16 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-import androidx.core.view.MenuItemCompat;
 
-import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
+import com.example.finaliproject.ClassRegisterProvider.StudentListAdapter;
+import com.example.finaliproject.Model.Student;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.zip.Inflater;
 
 public class  StudentList extends AppCompatActivity {
 
@@ -319,6 +309,45 @@ public class  StudentList extends AppCompatActivity {
             });
 
         }
+
+//
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu, menu);
+//
+//        Log.w("myApp", "onCreateOptionsMenu -started- ");
+//
+//        SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
+//        MenuItem menuItem = menu.findItem(R.id.item_search);
+//        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItem);
+//
+//        searchView.setSearchableInfo( searchManager.getSearchableInfo(getComponentName()));
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener(){
+//
+//            @Override
+//            public boolean onQueryTextSubmit(String query) {
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String newText) {
+//                return true;
+//            }
+//        });
+//         return true;
+//
+//
+//    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.item_search){
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
     public void dateTimeConfiguration(){
         String date = DateFormat.getDateInstance().format(new Date());

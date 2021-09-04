@@ -11,7 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.finaliproject.R;
-import com.example.finaliproject.Student;
+import com.example.finaliproject.Model.Student;
 
 import java.util.ArrayList;
 

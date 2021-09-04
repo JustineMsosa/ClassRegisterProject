@@ -1,20 +1,17 @@
 package com.example.finaliproject;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.MenuItemCompat;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.SearchView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.finaliproject.Database.DataBaseHelper;
 
 public class Login extends AppCompatActivity {
     Button Login;
@@ -41,7 +38,7 @@ public class Login extends AppCompatActivity {
         Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent registerIntent =  new Intent(Login.this, Register.class);
+                Intent registerIntent =  new Intent(Login.this, com.example.finaliproject.Register.class);
                 startActivity(registerIntent);
             }
         });

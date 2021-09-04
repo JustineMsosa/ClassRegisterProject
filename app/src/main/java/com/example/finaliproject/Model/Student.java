@@ -1,4 +1,4 @@
-package com.example.finaliproject;
+package com.example.finaliproject.Model;
 
 import java.io.Serializable;
 public class Student implements Serializable {

@@ -4,14 +4,13 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.finaliproject.R;
-import com.example.finaliproject.Student;
+import com.example.finaliproject.Model.Student;
 
 import java.util.ArrayList;
 

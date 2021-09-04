@@ -6,9 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.database.Cursor;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.example.finaliproject.ClassRegisterProvider.ClassRegisterAdaptor;
+import com.example.finaliproject.Model.Student;
 
 import java.util.ArrayList;
 

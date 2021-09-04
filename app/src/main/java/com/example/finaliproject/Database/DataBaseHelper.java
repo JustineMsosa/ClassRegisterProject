@@ -1,4 +1,4 @@
-package com.example.finaliproject;
+package com.example.finaliproject.Database;
 
 import android.content.ContentValues;
 import android.content.Context;

@@ -8,7 +8,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 
 import com.example.finaliproject.ClassListProvider.ClassListAdaptor;
-import com.example.finaliproject.ClassRegisterProvider.ClassRegisterAdaptor;
+import com.example.finaliproject.Model.Student;
 
 import java.util.ArrayList;
 
