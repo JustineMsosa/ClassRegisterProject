@@ -211,16 +211,9 @@ public class  StudentList extends AppCompatActivity {
                 while (c.moveToNext()){
                     arrID.add(c.getInt(0));
                 }
-
                 int j = arrID.get(position);
 
-
-
-                Student newStudent = new Student(list.get(position).getId(),
-                        list.get(position).getName().toString(),
-                        list.get(position).getAge(), list.get(position).getPresent(), list.get(position).getImage(), list.get(position).getSex());
                 Intent intent = new Intent(StudentList.this, StudentDetails.class);
-//               intent.putExtra("student", j);
                 intent.putExtra(Intent.EXTRA_TEXT, ""+j);
                 startActivity(intent);
 
